@@ -11,14 +11,14 @@ attr_accessor :name
         @@all
       end
 
-      def add_song
+      def add_song(arg)
         @@all.artist = self
       end
       def pring_song
         print self.add_song
       end
-      def songs
-        Song.select { |songs| songs.artists == self}
+      def songs(arg)
+        Song.select { |songs| songs.artist == self}
       end
       def self.find_or_create_by_name(name)
          @@all.find |artist|

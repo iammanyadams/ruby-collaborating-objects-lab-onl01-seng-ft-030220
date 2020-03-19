@@ -12,7 +12,7 @@ attr_accessor :name
       end
 
       def add_song(arg)
-        @@all.artist = self
+        all.artist = self
       end
       def pring_song(arg)
         print self.add_song
@@ -21,7 +21,7 @@ attr_accessor :name
         Song.select { |songs| songs.artist == self}
       end
       def self.find_or_create_by_name(name)
-         @@all.find |artist|
+         all.find |artist|
          artist.name == self
         Artist.new(name)
          end

@@ -14,7 +14,7 @@ attr_accessor :name
       def add_song(arg)
         @@all.artist = self
       end
-      def pring_song
+      def pring_song(arg)
         print self.add_song
       end
       def songs(arg)
